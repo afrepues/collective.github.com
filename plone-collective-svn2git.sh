@@ -24,7 +24,7 @@ set -e
 
 SVN2GIT=${SVN2GIT:-svn2git}
 
-[ -x $SVN2GIT ] ||
+[ -x "$(which $SVN2GIT)" ] ||
 {
     echo "The given svn2git ($SVN2GIT) does not exist or is not executable."
     exit 1
